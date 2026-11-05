@@ -8,9 +8,9 @@ import SmartImage from "@/components/SmartImage";
 
 // TODO: set each slide's `image` to a URL or a file in /public/assets (e.g. "/assets/hero-1.jpg")
 const SLIDES = [
-  { image: "", title: "Find the room your next shoot needs", text: "Photo cycs, sound stages and podcast lounges, listed by the people who run them." },
-  { image: "", title: "Book by the hour, create by the minute", text: "Pick a date and time, see transparent pricing, and send your request in seconds." },
-  { image: "", title: "Got a space? Put it to work", text: "List your studio, set your rate and approve bookings that fit your calendar." },
+  { image: "/images/categories/photography/photography-hero-1.webp", title: "Find the room your next shoot needs", text: "Photo cycs, sound stages and podcast lounges, listed by the people who run them." },
+  { image: "/images/categories/photography/photography-hero-2.webp", title: "Book by the hour, create by the minute", text: "Pick a date and time, see transparent pricing, and send your request in seconds." },
+  { image: "/images/categories/photography/photography-hero-3.webp", title: "Got a space? Put it to work", text: "List your studio, set your rate and approve bookings that fit your calendar." },
 ];
 
 export default function HeroSlider() {

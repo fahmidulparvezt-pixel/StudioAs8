@@ -31,6 +31,8 @@ export default function StudioDetails() {
 
   const me = user?.user;
   const images = [s.imageUrl, ...(s.gallery || [])].filter(Boolean);
+        console.log("Studio image URL:", s.imageUrl);
+        console.log("All images:", images);
 
   function book() {
     if (!me) { toast("Log in to book this studio."); return router.push(`/login?redirect=/studios/${id}`); }
