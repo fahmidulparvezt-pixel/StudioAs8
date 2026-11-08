@@ -14,7 +14,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-neutral text-neutral-content">
+    <footer className="border-t-4 border-primary bg-neutral text-neutral-content">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
           <Logo />
@@ -31,17 +31,17 @@ export default function Footer() {
         <div>
           <h3 className="mb-3 font-bold">Quick links</h3>
           <ul className="space-y-2 text-sm opacity-80">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/studios">Explore Studios</Link></li>
-            <li><Link href="/how-it-works">How It Works</Link></li>
-            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/" className="hover:text-accent">Home</Link></li>
+            <li><Link href="/studios" className="hover:text-accent">Explore Studios</Link></li>
+            <li><Link href="/how-it-works" className="hover:text-accent">How It Works</Link></li>
+            <li><Link href="/about" className="hover:text-accent">About Us</Link></li>
           </ul>
         </div>
         <div>
           <h3 className="mb-3 font-bold">Popular categories</h3>
           <ul className="space-y-2 text-sm opacity-80">
             {CATEGORY_INFO.map((c) => (
-              <li key={c.key}><Link href={`/studios?category=${encodeURIComponent(c.key)}`}>{c.label}</Link></li>
+              <li key={c.key}><Link href={`/studios?category=${encodeURIComponent(c.key)}`} className="hover:text-accent">{c.label}</Link></li>
             ))}
           </ul>
         </div>

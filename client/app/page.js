@@ -35,7 +35,7 @@ export default function Home() {
         <SectionHeading title="Browse by studio category" subtitle="Jump straight to the kind of room you need." />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {CATEGORY_INFO.map((c) => (
-            <Link key={c.key} href={`/studios?category=${encodeURIComponent(c.key)}`} className="flex h-full flex-col gap-2 rounded-box bg-base-100 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <Link key={c.key} href={`/studios?category=${encodeURIComponent(c.key)}`} className="flex h-full flex-col gap-2 rounded-box bg-base-100 p-6 shadow-sm border border-base-300 hover:border-primary transition hover:-translate-y-1 hover:shadow-md">
               <h3 className="text-lg font-bold">{c.label}</h3>
               <p className="text-sm text-base-content/70">{c.text}</p>
             </Link>

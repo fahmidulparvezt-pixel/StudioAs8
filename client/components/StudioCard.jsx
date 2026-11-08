@@ -5,7 +5,7 @@ import SmartImage from "@/components/SmartImage";
 
 export default function StudioCard({ studio }) {
   return (
-    <article className="card h-full bg-base-100 shadow-sm">
+    <article className="card h-full border border-base-300 bg-base-100 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
       <figure className="relative">
         <SmartImage src={studio.imageUrl} alt={studio.title} className="h-48 w-full" label="Studio image" />
         <span className="badge badge-primary absolute left-3 top-3">{studio.category}</span>

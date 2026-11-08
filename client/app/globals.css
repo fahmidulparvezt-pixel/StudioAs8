@@ -2,7 +2,49 @@
 @plugin "daisyui" {
   themes: caramellatte --default, coffee --prefersdark;
 }
+@plugin "daisyui/theme" {
+  name: "studiolight";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: oklch(98% 0.005 250);
+  --color-base-200: oklch(95% 0.012 250);
+  --color-base-300: oklch(90% 0.018 250);
+  --color-base-content: oklch(25% 0.04 255);
+  --color-neutral: oklch(28% 0.05 255);
+  --color-neutral-content: oklch(93% 0.01 250);
+  --color-primary: oklch(45% 0.09 250);
+  --color-primary-content: oklch(98% 0.01 250);
+  --color-secondary: oklch(55% 0.05 245);
+  --color-secondary-content: oklch(98% 0.01 250);
+  --color-accent: oklch(72% 0.11 210);
+  --color-accent-content: oklch(20% 0.04 230);
+  --color-info: oklch(70% 0.12 235);
+  --color-info-content: oklch(20% 0.04 235);
+  --color-success: oklch(68% 0.14 160);
+  --color-success-content: oklch(20% 0.05 160);
+  --color-warning: oklch(80% 0.14 85);
+  --color-warning-content: oklch(25% 0.06 85);
+  --color-error: oklch(62% 0.2 25);
+  --color-error-content: oklch(98% 0.01 25);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
 
 html { scroll-behavior: smooth; }
 :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+.swiper-pagination-bullet-active { background: var(--color-primary) !important; }
+.btn-primary { font-weight: 600; letter-spacing: 0.01em; }
+.btn-primary:hover { background-color: var(--color-secondary); border-color: var(--color-secondary); }
+.input:focus, .select:focus, .textarea:focus, .file-input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.form-control { display: flex; flex-direction: column; }

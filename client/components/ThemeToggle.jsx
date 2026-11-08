@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-const LIGHT = "caramellatte";
+const LIGHT = "studiolight";
 const DARK = "coffee";
 
 export default function ThemeToggle() {

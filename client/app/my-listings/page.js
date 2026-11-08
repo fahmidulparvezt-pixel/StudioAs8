@@ -33,8 +33,8 @@ function Listings() {
       </div>
       {loading ? <TableSkeleton /> : error ? <p className="text-error">{error}</p> : data?.length ? (
         <div className="overflow-x-auto rounded-box border border-base-300">
-          <table className="table">
-            <thead><tr><th>Studio</th><th>Category</th><th>Rate</th><th>Location</th><th className="text-right">Actions</th></tr></thead>
+          <table className="table table-zebra">
+            <thead class = "bg-base-200"><tr><th>Studio</th><th>Category</th><th>Rate</th><th>Location</th><th className="text-right">Actions</th></tr></thead>
             <tbody>
               {data.map((s) => (
                 <tr key={s._id}>

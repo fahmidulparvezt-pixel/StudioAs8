@@ -20,7 +20,7 @@ export default function HeroSlider() {
         <SwiperSlide key={i}>
           <div className="relative flex h-[520px] items-center bg-neutral text-neutral-content">
             <SmartImage src={s.image} alt="" label={`Hero image ${i + 1}`} className="absolute inset-0 h-full w-full opacity-40" />
-            <div className="absolute inset-0 bg-gradient-to-r from-neutral via-neutral/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-neutral via-neutral/80 to-neutral/20" />
             <div className="relative mx-auto w-full max-w-7xl px-4">
               <div className="max-w-xl space-y-5">
                 <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">{s.title}</h1>

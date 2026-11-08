@@ -46,12 +46,12 @@ export default function Navbar() {
   ));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-base-300 bg-base-100/95 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-neutral text-neutral-content shadow-md">
       <div className="navbar mx-auto max-w-7xl px-4">
         <div className="navbar-start gap-1">
           <div className="dropdown lg:hidden">
             <button tabIndex={0} className="btn btn-ghost btn-circle" aria-label="Open menu"><FiMenu className="h-5 w-5" /></button>
-            <ul tabIndex={0} className="menu dropdown-content z-10 mt-3 w-56 rounded-box bg-base-100 p-2 shadow">{navLinks}</ul>
+            <ul tabIndex={0} className="menu dropdown-content z-10 mt-3 w-56 rounded-box bg-base-100 p-2 text-base-content shadow">{navLinks}</ul>
           </div>
           <Logo />
         </div>
@@ -73,7 +73,7 @@ export default function Navbar() {
                   </span>
                 )}
               </button>
-              <ul tabIndex={0} className="menu dropdown-content z-10 w-60 rounded-box bg-base-100 p-2 shadow">
+              <ul tabIndex={0} className="menu dropdown-content z-10 w-60 rounded-box bg-base-100 p-2 text-base-content shadow">
                 <li className="menu-title text-base-content">{user.name}</li>
                 {MENU.map((m) => <li key={m.href}><Link href={m.href}>{m.label}</Link></li>)}
                 <li><button onClick={logout}>Logout</button></li>

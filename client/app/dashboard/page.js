@@ -42,8 +42,8 @@ function Dashboard() {
       <h2 className="mb-4 text-2xl font-bold">Booking requests for your studios</h2>
       {incoming.loading ? <TableSkeleton rows={3} /> : incoming.data?.length ? (
         <div className="overflow-x-auto rounded-box border border-base-300">
-          <table className="table">
-            <thead><tr><th>Studio</th><th>Guest</th><th>When</th><th>Total</th><th>Status</th><th className="text-right">Actions</th></tr></thead>
+          <table className="table table-zebra">
+            <thead class = "bg-base-200"><tr><th>Studio</th><th>Guest</th><th>When</th><th>Total</th><th>Status</th><th className="text-right">Actions</th></tr></thead>
             <tbody>
               {incoming.data.map((b) => (
                 <tr key={b._id}>

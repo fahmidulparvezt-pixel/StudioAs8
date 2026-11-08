@@ -30,8 +30,8 @@ function Bookings() {
       <h1 className="mb-8 text-4xl font-extrabold">My bookings</h1>
       {loading ? <TableSkeleton /> : error ? <p className="text-error">{error}</p> : data?.length ? (
         <div className="overflow-x-auto rounded-box border border-base-300">
-          <table className="table">
-            <thead><tr><th>Studio</th><th>Date</th><th>Time</th><th>Total</th><th>Status</th><th className="text-right">Action</th></tr></thead>
+          <table className="table table-zebra">
+            <thead class = "bg-base-200"><tr><th>Studio</th><th>Date</th><th>Time</th><th>Total</th><th>Status</th><th className="text-right">Action</th></tr></thead>
             <tbody>
               {data.map((b) => (
                 <tr key={b._id}>
