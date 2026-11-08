@@ -41,7 +41,7 @@ export default function BookingModal({ studio, open, onClose }) {
   if (!open) return null;
   return (
     <div className="modal modal-open" role="dialog" aria-modal="true" aria-labelledby="book-title">
-      <form onSubmit={submit} className="modal-box space-y-3">
+      <form onSubmit={submit} className="modal-box space-y-3 border border-base-300">
         <h3 id="book-title" className="text-lg font-bold">Book {studio.title}</h3>
         <label className="form-control"><span className="mb-1 text-sm font-medium">Date</span>
           <input type="date" min={today()} required value={form.date} onChange={set("date")} className="input w-full" /></label>
