@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <Toaster position="top-right" />
+        <Toaster position="top-right" toastOptions={{ style: { background: "var(--color-base-100)", color: "var(--color-base-content)", border: "1px solid var(--color-base-300)" } }} />
         <AuthSync />
       </body>
     </html>
