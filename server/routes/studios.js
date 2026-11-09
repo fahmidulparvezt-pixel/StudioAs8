@@ -57,7 +57,9 @@ router.get("/", wrap(async (req, res) => {
     q.$or = [{ title: rx }, { location: rx }];
   }
   let cursor = (await getDb()).collection("studios").find(q).sort(SORTS[sort] || SORTS.newest);
-  if (Number(limit) > 0) cursor = cursor.limit(Number(limit));
+  const size = Number(limit);
+const page = Math.max(1, Number(req.query.page) || 1);
+if (size > 0) cursor = cursor.skip((page - 1) * size).limit(size);
   res.json(await cursor.toArray());
 }));
 
