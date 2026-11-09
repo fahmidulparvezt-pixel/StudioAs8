@@ -2,7 +2,7 @@
 
 Express + MongoDB API for **StudioSpace**, a peer-to-peer creative studio booking platform.
 
-- Live API: _add your deployed server URL here_
+- Live API: (http://localhost:5000)
 - Client repo: _add your client repo URL here_
 
 ## Features
