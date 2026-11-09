@@ -50,7 +50,7 @@ export default function Navbar() {
       <div className="navbar mx-auto max-w-7xl px-4">
         <div className="navbar-start gap-1">
           <div className="dropdown lg:hidden">
-            <button tabIndex={0} className="btn btn-ghost btn-circle" aria-label="Open menu"><FiMenu className="h-5 w-5" /></button>
+            <button tabIndex={0} className="btn btn-ghost btn-circle text-neutral-content" aria-label="Open menu"><FiMenu className="h-5 w-5" /></button>
             <ul tabIndex={0} className="menu dropdown-content z-10 mt-3 w-56 rounded-box bg-base-100 p-2 text-base-content shadow">{navLinks}</ul>
           </div>
           <Logo />
@@ -81,7 +81,7 @@ export default function Navbar() {
             </div>
           ) : (
             <>
-              <Link href="/login" className="btn btn-ghost">Login</Link>
+              <Link href="/login" className="btn btn-ghost text-neutral-content">Login</Link>
               <Link href="/register" className="btn btn-primary">Register</Link>
             </>
           )}

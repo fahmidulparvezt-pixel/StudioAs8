@@ -20,7 +20,7 @@ export default function ThemeToggle() {
   }
 
   return (
-    <button onClick={toggle} className="btn btn-ghost btn-circle" aria-label="Toggle light and dark theme">
+    <button onClick={toggle} className="btn btn-ghost btn-circle text-neutral-content" aria-label="Toggle light and dark theme">
       {theme === DARK ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />}
     </button>
   );
