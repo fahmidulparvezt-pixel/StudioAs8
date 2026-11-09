@@ -25,6 +25,7 @@ export async function getDb() {
     await db.collection("studios").createIndex({
       ownerEmail: 1,
     });
+    await db.collection("studios").createIndex({ category: 1, createdAt: -1 });
 
     console.log("MongoDB connected successfully");
   }
