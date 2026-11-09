@@ -30,6 +30,8 @@ const problem = (s) => {
   if (!s.title || !s.category || !s.location || !s.overview) return "Title, category, location and overview are required.";
   if (!(s.hourlyRate > 0)) return "Hourly rate must be greater than 0.";
   if (!(s.capacity > 0)) return "Max capacity must be greater than 0.";
+  if (s.title.length > 80) return "Title must be 80 characters or fewer.";
+  if (s.imageUrl && !/^https?:\/\//.test(s.imageUrl)) return "Image URL must start with http:// or https://.";
   return null;
 };
 
