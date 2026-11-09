@@ -6,6 +6,7 @@ import EmptyState from "@/components/EmptyState";
 import { GridSkeleton } from "@/components/Skeletons";
 import { CATEGORIES } from "@/lib/constants";
 import { useApi } from "@/lib/useApi";
+import Link from "next/link";
 
 function Explorer() {
   const params = useSearchParams();
@@ -24,7 +25,10 @@ function Explorer() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">
-      <h1 className="mb-8 text-4xl font-extrabold">Explore studios</h1>
+      <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
+  <h1 className="text-4xl font-extrabold">Explore studios</h1>
+  <Link href="/add-studio" className="btn btn-primary">Add New Studio</Link>
+</div>
       <div className="mb-8 grid gap-3 md:grid-cols-[1fr_200px_200px]">
         <input value={search} onChange={(e) => setSearch(e.target.value)} className="input w-full" placeholder="Search by name or location" aria-label="Search studios" />
         <select value={category} onChange={(e) => setCategory(e.target.value)} className="select w-full" aria-label="Category">
