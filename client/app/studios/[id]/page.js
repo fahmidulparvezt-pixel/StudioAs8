@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -8,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import toast from "react-hot-toast";
 import { FaStar } from "react-icons/fa6";
-import { FiCheck, FiMapPin, FiUsers } from "react-icons/fi";
+import { FiArrowLeft, FiCheck, FiMapPin, FiUsers } from "react-icons/fi";
 import SmartImage from "@/components/SmartImage";
 import BookingModal from "@/components/BookingModal";
 import Spinner from "@/components/Spinner";
@@ -53,6 +54,9 @@ export default function StudioDetails() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">
+       <Link href="/studios" className="mb-6 inline-flex items-center gap-2 text-sm font-medium hover:text-primary">
+        <FiArrowLeft aria-hidden /> Back to all studios
+         </Link>
       <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
         <div className="space-y-8">
           <Swiper modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }} className="w-full rounded-box">
