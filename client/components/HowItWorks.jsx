@@ -16,7 +16,7 @@ export default function HowItWorks() {
         {STEPS.map((s, i) => (
           <li key={s.title} className="rounded-box bg-base-100 p-6 shadow-sm">
             <div className="mb-4 flex items-center gap-3">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-content"><s.icon className="h-6 w-6" aria-hidden /></span>
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral text-neutral-content"><s.icon className="h-6 w-6" aria-hidden /></span>
               <span className="text-sm font-semibold text-base-content/60">Step {i + 1}</span>
             </div>
             <h3 className="mb-2 text-lg font-bold">{s.title}</h3>

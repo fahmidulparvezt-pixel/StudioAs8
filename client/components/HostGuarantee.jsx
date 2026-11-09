@@ -15,7 +15,7 @@ export default function HostGuarantee() {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {ITEMS.map((s) => (
           <div key={s.title} className="rounded-box border border-base-300 p-6">
-            <s.icon className="mb-4 h-8 w-8 text-primary" aria-hidden />
+            <s.icon className="mb-4 h-8 w-8 text-secondary" aria-hidden />
             <h3 className="mb-2 text-lg font-bold">{s.title}</h3>
             <p className="text-sm text-base-content/70">{s.text}</p>
           </div>
