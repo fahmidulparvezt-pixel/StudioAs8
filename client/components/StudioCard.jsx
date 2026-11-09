@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaStar } from "react-icons/fa6";
-import { FiMapPin } from "react-icons/fi";
+import { FiMapPin, FiUsers } from "react-icons/fi";
 import SmartImage from "@/components/SmartImage";
 
 export default function StudioCard({ studio }) {
@@ -18,6 +18,7 @@ export default function StudioCard({ studio }) {
           </span>
         </div>
         <p className="flex items-center gap-1 text-sm text-base-content/70"><FiMapPin aria-hidden /> <span className="line-clamp-1">{studio.location}</span></p>
+        <p className="flex items-center gap-1 text-sm text-base-content/70"><FiUsers aria-hidden /> Up to {studio.capacity} people</p>
         <p className="text-lg font-bold">${studio.hourlyRate} <span className="text-sm font-normal text-base-content/70">/ hr</span></p>
         <Link href={`/studios/${studio._id}`} className="btn btn-primary mt-auto w-full">View Details</Link>
       </div>
