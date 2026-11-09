@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.get("/", (_req, res) => res.json({ name: "StudioSpace API", status: "ok" }));
+app.get("/api/health", (_req, res) => res.json({ status: "ok", time: new Date().toISOString() }));
 app.use("/api/studios", studios);
 app.use("/api/bookings", bookings);
 
