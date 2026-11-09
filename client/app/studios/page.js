@@ -38,6 +38,16 @@ function Explorer() {
           <option value="priceDesc">Price: high to low</option>
         </select>
       </div>
+       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+         <p className="text-sm text-base-content/70">
+           {loading ? "Searching…" : `${data?.length ?? 0} studio${data?.length === 1 ? "" : "s"} found`}
+         </p>
+         {(search || category) && (
+         <button className="btn btn-sm btn-ghost" onClick={() => { setSearch(""); setQ(""); setCategory(""); }}>
+          Clear filters
+         </button>
+           )}
+        </div>
       {loading ? <GridSkeleton /> : error ? <p className="text-center text-error">{error}</p> : data?.length ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{data.map((s) => <StudioCard key={s._id} studio={s} />)}</div>
       ) : (
