@@ -57,8 +57,8 @@ export default function StudioDetails() {
        <Link href="/studios" className="mb-6 inline-flex items-center gap-2 text-sm font-medium hover:text-primary">
         <FiArrowLeft aria-hidden /> Back to all studios
          </Link>
-      <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
-        <div className="space-y-8">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+        <div className="min-w-0 space-y-8">
           <Swiper modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }} className="w-full rounded-box">
             {(images.length ? images : [""]).map((src, i) => (
               <SwiperSlide key={i}><SmartImage src={src} alt={`${s.title} photo ${i + 1}`} label="Gallery image" className="h-80 w-full md:h-[28rem]" /></SwiperSlide>
