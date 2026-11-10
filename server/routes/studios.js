@@ -31,7 +31,7 @@ const problem = (s) => {
   if (!(s.hourlyRate > 0)) return "Hourly rate must be greater than 0.";
   if (!(s.capacity > 0)) return "Max capacity must be greater than 0.";
   if (s.title.length > 80) return "Title must be 80 characters or fewer.";
-  if (s.imageUrl && !/^https?:\/\//.test(s.imageUrl)) return "Image URL must start with http:// or https://.";
+  if (s.imageUrl && !/^(https?:\/\/|\/)/.test(s.imageUrl)) return "Image URL must start with https://, http:// or /.";
   return null;
 };
 
